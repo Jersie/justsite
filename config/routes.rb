@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+
+  devise_for :users
+  get '/admin', to: 'main#index'
+
   get 'main/index'
   get '/services', to: 'main#services'
   get '/portfolio', to: 'main#portfolio'
